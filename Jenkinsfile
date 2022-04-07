@@ -1,10 +1,17 @@
+
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent any
+    
+    options { skipDefaultCheckout() }
+
     stages {
+
+        
         stage('build') {
             steps {
-                sh 'mvn --version'
+                    sh 'echo hey this is echood from jenkins'
+                    sh 'mvn --version'
+                }
             }
         }
-    }
 }
