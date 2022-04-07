@@ -4,14 +4,11 @@ pipeline {
     
     options { skipDefaultCheckout() }
 
-    stages {
-
-        
+    stages {        
         stage('build') {
             steps {
-                    sh 'echo hey this is echood from jenkins'
-                    sh 'mvn --version'
-                }
+               echo 'Hello World'
             }
         }
+    }
 }
